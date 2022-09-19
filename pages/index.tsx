@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
 
+import Header from '~/components/organisms/Header';
+
 const Home: NextPage = () => {
   return (
     <div>
-      <p>Hello World!</p>
+      <Header />
     </div>
   );
 };
