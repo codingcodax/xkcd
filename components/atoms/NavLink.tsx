@@ -1,8 +1,17 @@
-const NavLink = () => {
+import { FC, ReactNode } from 'react';
+import { Navbar } from '@nextui-org/react';
+
+interface NavLinkProps {
+  children: ReactNode;
+  href: string;
+  isActive: boolean;
+}
+
+const NavLink: FC<NavLinkProps> = ({ children, href, isActive }) => {
   return (
-    <div>
-      <p>NavLink Component</p>
-    </div>
+    <Navbar.Link href={href} isActive={isActive}>
+      {children}
+    </Navbar.Link>
   );
 };
 
