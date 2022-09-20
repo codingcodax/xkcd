@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { Navbar, Text, Button } from '@nextui-org/react';
 
-import NavLink from '~/components/atoms/NavLink';
+import { NavLink } from '~/components/atoms';
 
 const Header = () => {
   const { asPath } = useRouter();
