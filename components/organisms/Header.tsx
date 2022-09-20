@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router';
 import { Navbar, Text, Button } from '@nextui-org/react';
 
-import Link from '~/components/atoms/NavLink';
+import NavLink from '~/components/atoms/NavLink';
 
 const Header = () => {
   const { asPath } = useRouter();
 
-  const linkActive = (path) => asPath === path;
+  const linkActive = (path: string) => asPath === path;
 
   console.log(asPath);
 
@@ -18,12 +18,12 @@ const Header = () => {
         </Text>
       </Navbar.Brand>
       <Navbar.Content enableCursorHighlight>
-        <Link href='/' isActive={linkActive('/')}>
+        <NavLink href='/' isActive={linkActive('/')}>
           home
-        </Link>
-        <Link href='/about' isActive={linkActive}>
+        </NavLink>
+        <NavLink href='/about' isActive={linkActive('/about')}>
           about
-        </Link>
+        </NavLink>
 
         <Button auto flat>
           es
