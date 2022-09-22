@@ -11,7 +11,7 @@ const Header = () => {
   console.log(asPath);
 
   return (
-    <Navbar disableShadow maxWidth='xs'>
+    <Navbar disableShadow shouldHideOnScroll maxWidth='xs'>
       <Navbar.Brand>
         <Text>
           <Text b>next</Text>xkcd
