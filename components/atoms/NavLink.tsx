@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import Link from 'next/link';
 import { Navbar } from '@nextui-org/react';
 
 interface NavLinkProps {
@@ -9,9 +10,9 @@ interface NavLinkProps {
 
 const NavLink: FC<NavLinkProps> = ({ children, href, isActive }) => {
   return (
-    <Navbar.Link href={href} isActive={isActive}>
-      {children}
-    </Navbar.Link>
+    <Link passHref href={href}>
+      <Navbar.Link isActive={isActive}>{children}</Navbar.Link>
+    </Link>
   );
 };
 
