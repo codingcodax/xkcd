@@ -15,23 +15,6 @@ const ComicCard: FC<ComicCardProps> = ({ id, title, img, alt }) => {
   return (
     <Link passHref href={`/comic/${id}`}>
       <Card isPressable as='a' variant='bordered'>
-        <Card.Header
-          css={{
-            pb: 40,
-            position: 'absolute',
-            linearGradient: '#000000f2, #00000000',
-            zIndex: 1,
-          }}
-        >
-          <Row align='center' justify='space-between'>
-            <Text h4 color='white' css={{ mb: 0 }}>
-              {title}
-            </Text>
-            <Text color='#ffffffaa' size={12} weight='bold'>
-              #{id}
-            </Text>
-          </Row>
-        </Card.Header>
         <Card.Body css={{ p: 0 }}>
           <Card.Image
             alt={alt}
@@ -41,6 +24,16 @@ const ComicCard: FC<ComicCardProps> = ({ id, title, img, alt }) => {
             width='100%'
           />
         </Card.Body>
+        <Card.Footer css={{ bg: '$foreground' }}>
+          <Row align='center' justify='space-between'>
+            <Text b color='$background'>
+              {title}
+            </Text>
+            <Text b color='$backgroundAlpha'>
+              #{id}
+            </Text>
+          </Row>
+        </Card.Footer>
       </Card>
     </Link>
   );
