@@ -1,9 +1,13 @@
 import NextLink from 'next/link';
 import { Link, Text } from '@nextui-org/react';
 
+import Seo from '~/components/atoms/Seo';
+
 const About = () => {
   return (
     <div>
+      <Seo name='About' path='/about' />
+
       <Text>
         About from{' '}
         <NextLink passHref href='https://xkcd.com/'>
