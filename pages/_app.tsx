@@ -7,8 +7,8 @@ import { Footer } from '~/components/atoms';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <NextUIProvider>
-      <Container sm>
-        <Header />
+      <Header />
+      <Container xs>
         <Component {...pageProps} />
       </Container>
       <Footer />
