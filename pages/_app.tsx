@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <NextUIProvider>
       <Header />
-      <Container xs>
+      <Container sm>
         <Component {...pageProps} />
       </Container>
       <Footer />

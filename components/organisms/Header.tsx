@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Navbar, Text, Button } from '@nextui-org/react';
+import { Navbar, Text } from '@nextui-org/react';
 
 import { NavLink } from '~/components/atoms';
 
@@ -11,7 +11,7 @@ const Header = () => {
   console.log(asPath);
 
   return (
-    <Navbar disableShadow shouldHideOnScroll maxWidth='xs'>
+    <Navbar disableShadow shouldHideOnScroll maxWidth='sm'>
       <Navbar.Brand>
         <Text>
           <Text b>next</Text>xkcd
@@ -24,10 +24,6 @@ const Header = () => {
         <NavLink href='/about' isActive={linkActive('/about')}>
           about
         </NavLink>
-
-        <Button auto flat>
-          es
-        </Button>
       </Navbar.Content>
     </Navbar>
   );

@@ -17,6 +17,7 @@ const Comics: FC<ComicsProps> = ({ comics }) => {
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '1.5rem',
+        '@xsMax': { gridTemplateColumns: '1fr' },
       }}
     >
       {comics.slice(1).map(({ id, title, img, alt }) => (
